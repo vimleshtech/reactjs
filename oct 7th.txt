@@ -1,0 +1,49 @@
+https://github.com/vimleshtech/reactjs
+==========================================
+
+Today's Topics
+=====================
+-Interpolation/expression :
+	{2*5}
+-Tenary operator: if else 
+(ReactJS doesn't support if condition in render block)
+	a==1?true : false
+
+-Style binding
+	
+			
+-state and props 
+	state  : is mutable/chaneable
+	example:
+	class App extends Component
+	{
+		consructor()
+		{
+			super();
+			this.state={
+				text:'test'
+				}
+		}
+
+		render(){
+			return(
+				<div>
+				<h1>{this.state.text}		
+				</div>
+			);
+		}
+
+	}
+		
+	props  : is immutable/unchangeble
+		: parent data can be access 		
+		in child class			
+		
+		App.defaultPros
+			
+	
+
+Data biding
+=====================
+map function 
+	=>
