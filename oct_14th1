@@ -1,0 +1,90 @@
+import React,{Component}  from 'react';
+
+class Test extends Component{
+
+    constructor()
+    {
+        super();
+        this.state={
+                    id:0,
+                    name:'',
+                    gender:'',
+                    ldata:[{id:11,name:'raman'},{id:22,name:'jatin'}]
+                }
+
+        this.test = this.test.bind(this);        
+    }
+    
+    test()
+    {
+        alert('hi');
+
+        var v = this.state.id;
+        v +=1;
+        this.setState({id:v});
+
+
+    }
+
+    render()
+    {
+        var d =11;
+    
+        return(
+            <div>
+                <h1> hello - Test </h1>
+                    {d} {this.props.test}
+                <h2>data from state </h2>
+                {this.state.id}
+                
+                <h1>Event test</h1>
+                <input type="button" value="Click Me" onClick={this.test} />
+                    
+                    <h1> list data </h1>
+                    <table >
+
+                    
+                    {this.state.ldata.map((val, i) =>  <TableRow dd={i} ldata = {val} />)}
+                    </table>
+
+            </div>
+        );
+    }
+
+
+}
+
+class TableRow extends Component{
+
+
+    constructor()
+    {
+        super();
+        this.test = this.test.bind(this);
+
+    }
+    test(i)
+    {
+        alert('hi '+i)
+    }
+    render()
+    {
+        return(
+
+            <tr>    
+                    <td>
+                                {this.props.ldata.id}
+                    </td>
+                    <td>
+                                {this.props.ldata.name}
+                    </td>
+                    <td>
+                        <input type="button" value={this.props.dd}   />
+                    </td>
+            </tr>
+        );
+    }
+}
+export default Test;
+
+
