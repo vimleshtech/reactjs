@@ -1,0 +1,52 @@
+a =[]
+[]
+a.push({id:111,name:'raman'})
+1
+a
+[{…}]
+0: {id: 111, name: "raman"}
+length: 1
+__proto__: Array(0)
+a.push({id:111,name:'raman'})
+2
+a
+(2) [{…}, {…}]
+a[1]
+{id: 111, name: "raman"}
+a.splice(0,1)
+[{…}]
+a.push({id:111,name:'raman'})
+2
+a.push({id:111,name:'raman'})
+3
+a
+(3) [{…}, {…}, {…}]
+a.pop()
+{id: 111, name: "raman"}
+a.push({id:112,name:'jatin'})
+3
+a
+(3) [{…}, {…}, {…}]
+a.filter((x) => x.name =='jatin')
+[{…}]
+0: {id: 112, name: "jatin"}
+length: 1
+__proto__: Array(0)
+a.filter((x) => x.name =='raman')
+(2) [{…}, {…}]
+a.filter((x) => x.id>111)
+[{…}]
+a.sort((x,y) => x.name.localeCompare(y.name))
+(3) [{…}, {…}, {…}]
+0: {id: 112, name: "jatin"}
+1: {id: 111, name: "raman"}
+2: {id: 111, name: "raman"}
+length: 3
+__proto__: Array(0)
+a.sort((x,y) => y.name.localeCompare(x.name))
+(3) [{…}, {…}, {…}]
+0: {id: 111, name: "raman"}
+1: {id: 111, name: "raman"}
+2: {id: 112, name: "jatin"}
+length: 3
+__proto__: Array(0)
