@@ -1,0 +1,204 @@
+Object Operations
+======================
+push()
+splice()
+sort()
+filter()
+includes()
+length
+
+Arrow function =>
+
+
+
+================================
+DataType
+----------------
+-number
+	a =111.22
+	a%1 ==0  : int
+		or float
+
+	
+-string
+	'11'
+	"22"
+-boolean
+-object
+	[11,22,333]
+	{id:11,name:'raman'}
+-function 
+
+
+Scope of variable
+---------
+a =1			: global (in file)
+let b =33		: within {}
+var c =444		: within function 
+
+===============
+mul(5)(3)
+
+
+mul = function mul(x){
+ return function(m){ return x*m; }
+}
+ƒ mul(x){
+ return function(m){ 
+
+return x*m; }
+}
+
+
+
+=========================
+bind vs call vs apply 
+
+
+Example:
+	function hello(a)
+	{
+
+	}
+
+d =[111,222,33]
+o = hello.bind(d)
+
+
+o(99)
+
+
+
+customer2 = { name: 'Nat', email: 'nat@hotmail.com' };
+
+function greeting(text) {
+    console.log(`${text} ${this.name}`);
+}
+
+greeting.call(customer1, 'Hello','ffff'); // Hello Leo
+
+greeting.apply(customer1, ['Hello','ffff']); // Hello Leo
+
+
+includes()
+==========================
+a = "skjgsyfshsfs s"
+
+if(a.inculdes("fs"))
+
+
+
+
+npm install bootstrap
+---------------------------
+form-control 	: textbox
+btn btn-primary : 
+btn btn-danger : 
+btn btn-success : 
+etc.
+
+
+Count :
+================================
+data = [{cid,cname,email,phohe,dob,ismark:false},{}]
+
+ var customers = this.state.customers;
+
+    var mcount =customers.filter(x=> x.ismark ===true).length;
+    var umcount = customers.length- mcount;
+
+    var total = customers.length;
+
+
+
+====show 
+{this.state.data.map((row,i)=> 
+
+	<p>  {row.cid} </p>
+ )}
+
+
+{this.state.data.map((row,i)=> 
+
+	<childcompoent  data={row} />
+ )}
+
+:childcompoent
+
+<tr style={{backgroundColor: color}}>
+                
+                <td> {this.props.data.cid}</td> 
+                <td>{this.props.data.cname} </td>
+                <td>
+                <input type="button" onClick={()=>this.props.row_edit
+
+(this.props.rowitem.cid)} className="btn btn-success" value="Edit" />
+                </td>
+
+                <td>    
+                <input type="button" onClick={()=>this.props.row_delete
+
+(this.props.rowitem.cid)} className="btn btn-danger" value="Delete" />
+                </td>
+                <td>    
+                <input type="checkbox" onClick={()=>this.props.row_mark
+
+(this.props.rowitem.cid)}  value="Mark" />
+                </td>
+         
+
+            </tr>
+	
+
+
+
+
+Edit
+==============================
+row_edit(e){
+
+	var temp = 	data.filter(x=> x.cid == e)	
+
+	this.refs.id.value = temp[0].cid
+	this.refs.name.value = temp[0].name
+
+	isreadonly = true 
+
+
+}
+
+add(){
+
+isreadonly = false
+}
+
+update()
+{
+
+isreadonly = false 
+}
+
+Input box : read only
+====================
+
+<input type="number" ref="id" readOnly={this.state.readonly} required  
+
+className="form-control" placeholder="Customer id"/> 
+
+
+Button toggle
+=================
+teniary operator
+
+	if(){}  else {}
+
+	{condition? true : false }
+
+
+
+
+update same row
+====================
+
+
+
