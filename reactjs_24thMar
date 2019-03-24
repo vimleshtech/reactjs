@@ -1,0 +1,140 @@
+a= [111,333,444,5]
+--foreach
+a.forEach(d => {console.log(d*4);})
+
+--map 
+a.map((d,i) => { console.log(i,d);} )
+
+
+a = [{id:101,name:'raman',gender:'male'},{id:201,name:'pankaj',gender:'male'},
+
+{id:111,name:'nidhi',gender:'female'},{id:101,name:'vidhi',gender:'female'},
+
+{id:10,name:'aman',gender:'male'}]
+
+
+-filter 
+a.filter( b=>  b.name =='aman')
+
+
+
+--sort
+a =[111,22,33,44,55,6]
+name = ['jatin','aman','divya','ayush']
+
+
+a =[111,22,33,44,55,6]
+a.sort()  --asc
+a.sort().reverse()  --desc
+
+
+--sort 
+a.sort((i,j) => i.name.localeCompare(j.name))
+
+a.sort((i,j) => j.name.localeCompare(i.name))
+
+
+#####################
+a = [111,222,333,44]
+for r in a:
+
+	if r['name'] =='aman':
+		print(r)
+
+=================================
+=================================
+API : 	application programing interface 
+	
+	
+
+	XML		: Extensiable markup language
+	Example:
+			<employee>
+				<user>
+
+					<id> 1 </id>
+					<name> raman </name>
+				</user>
+
+				<user>
+					<id> 2 </id>
+					<name> nitin </user>
+				</user>
+
+			</employee>
+
+	JSON 		: JavaScript object notation 
+	Example:
+		[{id:111,
+		name:'raman',
+		gender:'male'
+		},
+		{id:112,
+		name:'raman',
+		gender:'male'
+		}
+		,
+		{id:111,
+		name:'raman',
+		gender:'male'
+		}]
+
+
+
+{
+    "userId": 1,
+    "id": 1,
+    "title": "delectus aut autem",
+    "completed": false
+  },
+
+
+		
+		
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(res=>res.json())
+.then(out=>console.log(out));
+
+
+method:
+	GET		: READ
+	POST		: SEND 	(CREATE)
+	PUT		: SEND FOR SAME RESOURCE (UPDATE)
+	DELETE		: REMOVE 
+		
+
+
+customer = []
+
+fetch('https://jsonplaceholder.typicode.com/todos',
+{
+method:'post',
+body:customer 
+
+})
+
+
+
+--r
+### web 
+install.packages("RCurl")
+install.packages("XML")
+install.packages("JSON")
+
+
+library(RCurl)
+library(XML)
+library(JSON)
+
+# Read the URL.
+url <- "https://www.geos.ed.ac.uk/~weather/jcmb_ws/"
+
+# Gather the html links present in the webpage.
+links <- getHTMLLinks(url)
+  
+
+# Identify only the links which point to the JCMB 2015 files. 
+filenames <- links[str_detect(links, "JCMB_2015")]
+
+
