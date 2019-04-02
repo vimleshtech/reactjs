@@ -1,0 +1,69 @@
+JSON Service:
+===============
+	-> NodeJS / ExpressJS
+	
+
+
+mkdir service-name
+cd service-name
+npm init 		(init the project)
+npm install 		(npm install - pulugin)
+node  file.js		(to run the service)
+
+
+
+Create own API
+====================
+npm install express
+npm install expressjs
+npm install mysql
+npm install cros
+
+var express = require('express');
+var cors = require('cors')
+
+var app = express();//create object of express 
+
+app.use(cors());
+
+app.get('',function(req,res){  //default service
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //res.header("Access-Control-Allow-Origin", "10.22.333.4422");
+    //res.header("Access-Control-Allow-Method", "GET,POST");
+
+
+    //res.send("hello from default!!!!");
+    res.json({ a: 1 });
+    res.end();
+
+});
+app.get('/products',function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.json({ a: 1 });
+    res.end();
+
+});
+
+app.get('/customers',function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.send("hello from custoemrs!!!!");
+
+});
+app.get('/salesorders',function(req,res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.send("hello from saleorders!!!!");
+
+
+});
+
+var server = app.listen(3004, function () {   
+    console.log("app running on port.", server.address().port);
+});
+
+
+
+
+
