@@ -1,0 +1,116 @@
+========================
+======================== Data Sharing
+========================
+
+JS: JavaScript 
+=========================
+	-> JS is case sentive 
+		-> test() is not eqal Test() 
+
+	-> JS can run or execute with any web development langauge/framework
+
+	-> Example:
+		a =1
+		b =2
+		c = a+b
+		
+	-> Variable and data type
+	    Example
+		a  =1   //here a is variable and 1 is data or value
+	
+	    Data Type:
+		a =1  //number
+		a ="skjsjhsjhs "   //string
+
+		a ='skhsjs'   //string
+
+		-number
+			a =12
+			a =444.
+		-string
+			a ='sks'
+			a = "shjsh"
+			
+		-boolean			
+			a = true or flas
+		-object
+			[]
+				a = [11,22,3,4]		
+			{}
+				a = {id:101, name:'raman'}
+
+		-function
+				test(){
+		
+				}
+					
+
+
+Scope of variables:
+	a =1		//global variable, can be access from anywhere
+	let b =44	//block level 	
+	var d = 444	//function level 
+
+keywords
+	use 'strict'
+	
+	var a =1;
+	var d ="ssh";
+
+	
+	
+	const data = 1;  //read only
+
+syntax:
+	=>  		arrow function 
+
+	...		spread function 
+
+
+function: is set of command or statement which is reusable 
+	function add(){
+
+		a =1;
+		b =4;
+		c = a+b;
+		console.log(c);
+
+	}
+	
+	
+	--
+	function add(a,b){  //a,b are argument/paramenters(input)
+
+			c =a+b;
+			console.log(c);
+	}
+
+
+		
+	add(100,2)
+
+Events: when function shoule exectue / call/ run 
+	onClick()
+	onChange()
+	
+	--
+	OnFocus()
+	onKeyDown()
+	onKeyUp()
+	
+	
+Install and import Bootstrap:
+	npm install  bootstrap 
+	npm install  --save bootstrap 
+	npm   i    --save bootstrap
+	
+
+
+	import bootrap
+	------------------
+	import in index.js 
+		
+		
+	
+	
+					 
