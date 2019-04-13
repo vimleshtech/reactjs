@@ -1,0 +1,51 @@
+import React,{Component} from 'react';
+//npm install bootrtrap
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//import './index.css';
+
+
+
+export default class Test extends Component{
+
+    constructor(){  //is inbuilt function which call automatically 
+
+        super();
+        this.aa = this.compute.bind(this);
+
+    }
+
+    // test(){
+    test=()=>{
+
+        console.log('test');
+
+        this.add(11,222);
+
+    }
+
+    compute(){
+
+        this.add(1,20);
+
+    }
+    add(a,b){
+
+            console.log(a+b);
+    }
+    render(){
+
+        return(
+            <div>
+                    <h1> Hi </h1>
+
+                    <p> 
+                            <input type="text" className="form-control" />
+                            <input type="button" onClick={this.aa}
+                             value="Submit" className="btn-primary  btncust" />
+                    </p>
+
+             </div>
+        );
+
+    }
+}
