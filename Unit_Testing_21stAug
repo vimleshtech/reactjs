@@ -1,0 +1,63 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+//import { shallow } from 'enzyme';
+
+
+describe('App Suite',()=>{
+
+
+  it('Addition Validate-1',()=>{
+    var o = new App();
+
+    expect(o.add(4,6)).toEqual(10);
+
+  });
+
+  
+  it('Addition Validate-2',()=>{
+    var o = new App();
+
+    expect(o.add(4,6)).toEqual(8);
+
+  });
+
+  it('Tax Validate',()=>{
+
+
+    var o = new App();
+
+    expect(o.tax(500000)).toEqual(25000);
+    
+
+  });
+  
+  it('renders without crashing', () => {
+
+
+    const div = document.createElement('div');
+
+    ReactDOM.render(<App />, div);
+    
+    ReactDOM.unmountComponentAtNode(div);
+  
+  
+  });
+
+  it('Validate a tag',()=>{
+
+
+    //const wrapper = shallow(<App />);
+    //expect(wrapper.find('h1')).to.have.lengthOf(3);
+  
+
+    
+
+  })
+
+});
+
+
+
+
